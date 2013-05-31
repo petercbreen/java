@@ -1,0 +1,83 @@
+<project default="validate">
+  <target name="init" if="antlib.dir">
+    <!-- IMPORTANT: Import custom and third-party tasks -->
+    <taskdef file="${antlib.dir}/antlib.xml">
+      <classpath>
+        <fileset dir="${antlib.dir}">
+          <include name="*.jar"/>
+        </fileset>
+      </classpath>
+    </taskdef>
+  </target>
+
+  <target name="validate" depends="init">
+    <validation>
+      <exproject name="ex00_1">
+        <!-- TODO: what about testing? (i.e. test coverage and usefullness of tests)-->
+        <before>
+          <build-submission/>
+        </before>
+        <interfaces>
+          <package name="helloworld">
+            <class name="Main">
+              <comment>
+                /**
+                  * Obligatory HelloWorld main class
+                  * /
+              </comment>
+              <method name="main" type="void" static="true">
+                <comment>
+                  /**
+                    * The main method, doing the obligatory thing.
+                    * @param args Command line arguments
+                    */
+                </comment>
+                <args>
+                  <arg name="args" type="String[]"/>
+                </args>
+                System.out.println("Hello World!");
+              </method>
+            </class>
+          </package>
+        </interfaces>
+        <!-- TODO: what about checkstyle, etc? -->
+      </exproject>
+      <exproject name="ex00_2">
+        <before>
+          <build-submission/>
+        </before>
+        <interfaces>
+        <package name="accumulator">
+          <class name="Acc">
+            <comment>
+              /**
+                * A class that accumulates a sum of integers.
+                */
+            </comment>
+            <!-- TODO: an attribute that excludes an entry from matching -->
+            <method name="add" type="void">
+              <comment>
+                /**
+                  * Add an integer to the accumulator.
+                  * @param i The integer to add.
+                  */
+              </comment>
+              <args>
+                <arg name="i" type="int"/>
+              </args>
+            </method>
+            <method name="getResult" type="int">
+              <comment>
+                /**
+                  * Get the accumulated result so far.
+                  * @return The result.
+                  */
+              </comment>
+            </method>
+          </class>
+        </package>
+        </interfaces>
+      </exproject>
+    </validation>
+  </target>
+</project>

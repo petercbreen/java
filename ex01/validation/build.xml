@@ -1,0 +1,99 @@
+<project default="validate">
+  <target name="init" if="antlib.dir">
+    <!-- IMPORTANT: Import custom and third-party tasks -->
+    <taskdef file="${antlib.dir}/antlib.xml">
+      <classpath>
+        <fileset dir="${antlib.dir}">
+          <include name="*.jar"/>
+        </fileset>
+      </classpath>
+    </taskdef>
+  </target>
+
+  <target name="validate" depends="init">
+    <validation>
+      <exproject name="ex01_1">
+        <before>
+          <build-submission/>
+        </before>
+        <interfaces>
+          <package name="rocket">
+            <class name="Houston">
+              <comment>
+                /**
+                  * Houston control center class.
+                  * /
+              </comment>
+              <method name="main" type="void" static="true">
+                <comment>
+                  /**
+                    * The countdown is started when calling the main method.
+                    * @param args Command line arguments (not used here)
+                    */
+                </comment>
+                <args>
+                  <arg name="args" type="String[]"/>
+			  </args>
+              </method>
+            </class>
+          </package>
+        </interfaces>
+      </exproject>
+      <exproject name="ex01_2">
+        <before>
+          <build-submission/>
+        </before>
+        <interfaces>
+        <package name="prime">
+          <class name="Primes100">
+            <comment>
+              /**
+                * A class that prints all primes smaller 100.
+                */
+            </comment>
+            <!-- TODO: an attribute that excludes an entry from matching -->
+            <method name="main" type="void" static="true">
+              <comment>
+                /**
+                  * Print all primes smaller 100.
+                  * @param args Command line arguments.
+                  */
+              </comment>
+              <args>
+                <arg name="args" type="String[]"/>
+              </args>
+            </method>
+          </class>
+        </package>
+        </interfaces>
+	</exproject>
+      <exproject name="ex01_3">
+        <before>
+          <build-submission/>
+        </before>
+        <interfaces>
+        <package name="digits">
+          <class name="DigitCount">
+            <comment>
+              /**
+                * Counting all digits given in an input string.
+                */
+            </comment>
+            <method name="main" type="void" static="true">
+              <comment>
+                /**
+                  * Counts all dezimals given in the first argument string.
+                  * @param args Command line arguments.
+                  */
+              </comment>
+              <args>
+                <arg name="args" type="String[]"/>
+              </args>
+            </method>
+          </class>
+        </package>
+        </interfaces>
+      </exproject>
+    </validation>
+  </target>
+</project>

@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------------
+ Feedback ex03/ex03_1                                                6.5 Punkte 
+--------------------------------------------------------------------------------
+Alle Tests waren erfolgreich.
+                                       Missing           Coverage  
+            Instructions         |             21/316 |          93%
+            Branches             |               5/16 |          69%
+
+Papier ist in seiner Breite und Höhe nicht veränderbar, die Felder von
+GeneralPaperSize sollten also final sein. -0.5
+In der Aufgabenstellung heißt es:
+    "etwa “305x210” für ein Format mit Länge 305mm und Breite 210mm."
+Du müsstest also vor der Rückgabe des Strings noch nach int casten, wenn
+angebracht. -0.5
+Deine Implementierung funktioniert nicht. Wenn du vernünftige Tests geschrieben
+hättest, wäre dir das auch aufgefallen. -3
+Selbiges gilt für dein DIN-A-Papier. -3
+
+--------------------------------------------------------------------------------
+ Feedback ex03/ex03_2                                               13.5 Punkte 
+--------------------------------------------------------------------------------
+1 Tests schlugen fehl:
+  MenuTest             menuTest
+                                       Missing           Coverage  
+            Instructions         |             47/496 |          91%
+            Branches             |               8/22 |          64%
+
+Bei der Berechnung des Preises lieber ausschließlich mit Integern rechnen, diese
+Double-Casts sind unschön. -0.5
+
+--------------------------------------------------------------------------------
+ Feedback ex03/ex03_3                                                  5 Punkte 
+--------------------------------------------------------------------------------
+Alle Tests waren erfolgreich.
+                                       Missing           Coverage  
+            Instructions         |             90/555 |          84%
+            Branches             |              11/28 |          61%
+
+Gut.
+
+================================================================================
+Gesamtpunktzahl: 25.0

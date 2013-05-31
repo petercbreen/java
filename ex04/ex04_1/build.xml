@@ -1,0 +1,15 @@
+<!-- Java 2013: Build system.
+
+Call the validation build script in ../../../validation
+
+-->
+<project name="call-validation-ex04_1" default="call-validation">
+  <property name="validation.dir" location="../../../validation"/>
+  <target name="call-validation">
+    <ant dir="${validation.dir}">
+      <property name="project-name" value="ex04_1"/>
+      <property name="sheet" value="ex04"/>
+      <property name="submission.dir" location="${basedir}"/>
+    </ant>
+  </target>
+</project>

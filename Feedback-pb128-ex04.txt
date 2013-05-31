@@ -1,0 +1,41 @@
+--------------------------------------------------------------------------------
+ Feedback ex04/ex04_1                                                9.5 Punkte 
+--------------------------------------------------------------------------------
+Alle Tests waren erfolgreich.
+                                       Missing           Coverage  
+            Instructions         |           89/1.291 |          93%
+            Branches             |             58/156 |          63%
+
+Hier hättest du die Command-Queue abstrahieren können. -4
+Bei deinem TwoPlayerKeyboard scheint außerdem ein Spieler dem anderen
+Kommandos reindrücken zu können. -0.5
+
+
+--------------------------------------------------------------------------------
+ Feedback ex04/ex04_2                                                  2 Punkte 
+--------------------------------------------------------------------------------
+Alle Tests waren erfolgreich.
+                                       Missing           Coverage  
+            Instructions         |             33/352 |          91%
+            Branches             |               5/16 |          69%
+
+Der Test sollte nicht geändert werden. -3
+
+
+--------------------------------------------------------------------------------
+ Feedback ex04/ex04_3                                                  8 Punkte 
+--------------------------------------------------------------------------------
+Alle Tests waren erfolgreich.
+                                       Missing           Coverage  
+            Instructions         |             17/352 |          95%
+            Branches             |               6/24 |          75%
+
+In deinem undoTest testest du undo überhaupt nicht - funktioniert aber
+auch nicht. Das Problem ist, dass du von einem Sheet keine Kopie 
+anlegst, bevor du es in die Liste einfügst. So liegt dann an jeder
+Listenposition das selbe Objekt, weshalb dann bei einer Schreiboperation
+auch alle geändert werden. -6
+
+
+================================================================================
+Gesamtpunktzahl: 19.5
